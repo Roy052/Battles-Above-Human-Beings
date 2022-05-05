@@ -30,11 +30,14 @@
   </div>
   <div>
     <h2> What I learned </h2>
-    After being discharged from the military, passion for game development rekindled.<br><br>
-    I already assign GIGDC, but result is bad.<br><br>
-    I made a game to get the hang of it.
+      I made something in my mind to get a sense of game development again.<br><br>
+      After being discharged from the military, passion for game development rekindled.<br><br>
+      I learned about Scene Movement, Physics in 2D, Raycast, 
   </div>
   <div>
     <h2> What I can fix </h2>
-    
+      I was not good at using C#, there are many things to clear.<br><br>
+      Unit vs EnemyUnit, Building vs EnemyBuilding and so on.<br><br>
+      It could be clear if I use OOP correctly.<br><br>
+      And many things are missing what I was planned.
   </div>
