@@ -17,21 +17,23 @@ public class UnitSelectSceneManager : MonoBehaviour
     public GameObject[] unitMain1;
     public GameObject[] unitMain2;
 
+    public GameObject unitInfo;
 
     // Start is called before the first frame update
     void Start()
     {
         selectedUnitNum = new int[3];
         gm = GameObject.FindGameObjectWithTag("GameController").GetComponent<GameManager>();
-        selectedUnitNum[0] = 0;
-        selectedUnitNum[1] = 3;
-        selectedUnitNum[2] = 6;
+        selectedUnitNum[0] = 9;
+        selectedUnitNum[1] = 9;
+        selectedUnitNum[2] = 9;
         duplicatemessage.text = "";
 
+        unitMain0[9].GetComponent<SelectedUnit>().selected();
+        unitMain1[9].GetComponent<SelectedUnit>().selected();
+        unitMain2[9].GetComponent<SelectedUnit>().selected();
 
-        unitMain0[0].GetComponent<SelectedUnit>().selected();
-        unitMain1[3].GetComponent<SelectedUnit>().selected();
-        unitMain2[6].GetComponent<SelectedUnit>().selected();
+        unitInfo.SetActive(false);
     }
 
     public void SelectUnit(int num)
@@ -67,6 +69,12 @@ public class UnitSelectSceneManager : MonoBehaviour
     public void ResetUnit()
     {
         selectedCount = 0;
+        unitMain0[selectedUnitNum[0]].GetComponent<SelectedUnit>().unselected();
+        unitMain1[selectedUnitNum[1]].GetComponent<SelectedUnit>().unselected();
+        unitMain2[selectedUnitNum[2]].GetComponent<SelectedUnit>().unselected();
+        unitMain0[9].GetComponent<SelectedUnit>().selected();
+        unitMain1[9].GetComponent<SelectedUnit>().selected();
+        unitMain2[9].GetComponent<SelectedUnit>().selected();
     }
 
     public void NoDuplicate()

@@ -14,4 +14,15 @@ public class UnitSelectButton : MonoBehaviour
     {
         ussm.SelectUnit(num);
     }
+
+    private void OnMouseEnter()
+    {
+        ussm.unitInfo.GetComponent<UnitInfo>().unitnum = num;
+        ussm.unitInfo.SetActive(true);
+    }
+
+    private void OnMouseExit()
+    {
+        ussm.unitInfo.SetActive(false);
+    }
 }
