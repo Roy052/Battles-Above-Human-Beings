@@ -29,36 +29,43 @@ public class Ability : MonoBehaviour
         }
 
         Debug.Log("Abitiy : " + ability + ", " + character.name );
-        switch (this.ability)
+        if(isthisEnemy == false)
         {
-            
-            case 0:
-                break;
-            case 1:
-                character.heartIncrease += 0.5f;
-                break;
-            case 2:
-                character.mentalIncrease += 0.5f;
-                break;
-            case 3:
-                break;
+            switch (this.ability)
+            {
+
+                case 0:
+                    break;
+                case 1:
+                    character.heartIncrease += 0.5f;
+                    break;
+                case 2:
+                    character.mentalIncrease += 0.5f;
+                    break;
+                case 3:
+                    break;
+            }
         }
+        
     }
 
     private void OnDestroy()
     {
-        switch (this.ability)
+        if (isthisEnemy == false)
         {
-            case 0:
-                break;
-            case 1:
-                character.heartIncrease -= 0.5f;
-                break;
-            case 2:
-                character.mentalIncrease -= 0.5f;
-                break;
-            case 3:
-                break;
-        }
+            switch (this.ability)
+            {
+                case 0:
+                    break;
+                case 1:
+                    character.heartIncrease -= 0.5f;
+                    break;
+                case 2:
+                    character.mentalIncrease -= 0.5f;
+                    break;
+                case 3:
+                    break;
+            }
+        } 
     }
 }

@@ -91,7 +91,10 @@ public class UnitSelectSceneManager : MonoBehaviour
 
     public void UnitSelectToMain()
     {
-        gm.UnitSelection(selectedUnitNum);
-        SceneManager.LoadScene("Main");
+        if(selectedCount == 3)
+        {
+            gm.UnitSelection(selectedUnitNum);
+            SceneManager.LoadScene("Main");
+        }
     }
 }

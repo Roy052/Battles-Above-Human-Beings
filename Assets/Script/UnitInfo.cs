@@ -14,7 +14,7 @@ public class UnitInfo : MonoBehaviour
     public Text ability;
     string[] abilityTexts =
     {
-        "No Ability", "1 health per second", "1 mind per second", "something", 
+        "No Ability", "0.5 health per second", "0.5 mind per second", "something", 
         "something", "something", "something", "something", "something"
     };
     void Start()
