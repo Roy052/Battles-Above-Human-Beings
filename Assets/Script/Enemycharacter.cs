@@ -6,6 +6,7 @@ public class Enemycharacter : MonoBehaviour
 {
     public int heartCount, mentalCount, heartIncrease, mentalIncrease;
     public float health;
+    public GameObject healthBar;
     public GameObject[] units;
     public GameObject[] laneButtons;
     public GameManager gm;
@@ -123,6 +124,8 @@ public class Enemycharacter : MonoBehaviour
         clone.transform.localScale = new Vector3(-1, 1, 1);
         Destroy(clone.GetComponent<Unit>());
 
+        
+
         clone.tag = "EnemyUnit";
         clone.layer = LayerMask.NameToLayer("Enemy");
         if(level == 1)
@@ -141,6 +144,11 @@ public class Enemycharacter : MonoBehaviour
         //Cost
         heartCount -= unitInfo[unitnum, 0];
         mentalCount -= unitInfo[unitnum, 1];
+
+        GameObject healthBarClone = Instantiate(healthBar,
+                new Vector3(lanes[lane, 0], lanes[lane, 1], 0), Quaternion.identity);
+        healthBarClone.GetComponent<HealthBar>().unit = clone;
+        healthBarClone.GetComponent<HealthBar>().attatched = true;
     }
 
     public void HeartCountIncrease(int amount)

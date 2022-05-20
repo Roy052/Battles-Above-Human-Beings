@@ -1663,6 +1663,7 @@ MonoBehaviour:
   heartIncrease: 0
   mentalIncrease: 0
   health: 300
+  healthBar: {fileID: 3884798741736712574, guid: 0d74fc64e9050df44b66341094615697, type: 3}
   units: []
   laneButtons: []
   gm: {fileID: 0}

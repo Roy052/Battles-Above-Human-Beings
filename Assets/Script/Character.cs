@@ -7,6 +7,7 @@ public class Character : MonoBehaviour
 {
     public float heartCount = 0, mentalCount = 0, heartIncrease = 0, mentalIncrease = 0;
     public float health;
+    public GameObject healthBar;
     GameObject[] units;
     GameObject[] laneButtons;
     GameManager gm;
@@ -87,10 +88,15 @@ public class Character : MonoBehaviour
         else
         {
             // »ý¼º
-            GameObject clone = Instantiate(units[unitnum], new Vector3(lanes[lane, 0], lanes[lane, 1], 0), Quaternion.identity);
+            GameObject clone = Instantiate(units[unitnum], 
+                new Vector3(lanes[lane, 0], lanes[lane, 1], 0), Quaternion.identity);
             heartCount -= unitInfo[unitnum, 0];
             mentalCount -= unitInfo[unitnum, 1];
-            if(this.name == "char3")
+            GameObject healthBarClone = Instantiate(healthBar,
+                new Vector3(lanes[lane, 0], lanes[lane, 1], 0), Quaternion.identity);
+            healthBarClone.GetComponent<HealthBar>().unit = clone;
+            healthBarClone.GetComponent<HealthBar>().attatched = true;
+            if (this.name == "char3")
             {
                 clone.GetComponent<Unit>().damage += 0.2f;
                 clone.GetComponent<Unit>().delay -= 0.05f;

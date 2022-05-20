@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyUnit : MonoBehaviour
 {
     // Start is called before the first frame update
-    public float damage, delay, health, speed;
+    public float damage, delay, health, speed, maxhealth;
     public int ability;
     public Rigidbody2D rb2d;
     Vector2 movement;
@@ -18,6 +18,7 @@ public class EnemyUnit : MonoBehaviour
         movement = new Vector2(-1, 0);
         mask = LayerMask.GetMask("Ally", "Enemy");
         rb2d = this.gameObject.GetComponent<Rigidbody2D>();
+        maxhealth = health;
     }
 
     // Update is called once per frame
