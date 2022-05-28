@@ -28,6 +28,10 @@
         <td><img src = "https://img.itch.zone/aW1hZ2UvMTE3ODIzOS84ODM4MjQ0LnBuZw==/347x500/p9nrqZ.png"></td>
       </table>
   </div>
+    <div>
+    <h2> Game Play Video </h2>
+    https://youtu.be/ZLfVWB7Wlzk
+  </div>
   <div>
     <h2> What I learned </h2>
       I made something in my mind to get a sense of game development again.<br><br>
