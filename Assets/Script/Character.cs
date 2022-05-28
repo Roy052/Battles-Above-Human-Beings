@@ -40,7 +40,8 @@ public class Character : MonoBehaviour
         if(this.name == "char1")
         {
             GameObject[] buildings = GameObject.FindGameObjectsWithTag("Town");
-            for(int i = 0; i < 3; i++)
+            if(buildings != null)
+            for(int i = 0; i < buildings.Length; i++)
             {
                 buildings[i].GetComponent<Building>().upgradeTimer -= 10;
             }

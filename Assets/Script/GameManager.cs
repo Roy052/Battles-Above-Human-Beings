@@ -103,7 +103,7 @@ public class GameManager : MonoBehaviour
         for(int i = 0; i < 3; i++)
         {
             btn[i] = btnobject[i].GetComponent<Button>();
-            btn[i].image.sprite = btnImages[selectedUnit[i]];
+            btn[i].image.sprite = btnImages[selectedUnit[btn[i].name[4] - '0']];
         }
     }
 }
